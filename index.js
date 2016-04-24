@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
-var bodyParser = require('request')
+var request = require('request')
 
 var token = "CAAYLBZA5g0wkBADVVtC38ZACAJI4vvruIuG8c1bE1NFcZAdl6QZBjIB00xZCoQbuUkbOVYCf6ff3brdVruZC4BHhWLcPoe5yfYIqqFmdT8sEnM53iJiSgN7dX98eQnAKWTCVDj0LxfZCZAZBpt7cQEICYBICuhEWWbnZBkhdecAOnChV9hKiw9sMsZBmnGGTdZC5JP86rVoEo2E1NQZDZD";
 
