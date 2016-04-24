@@ -4,6 +4,12 @@ var app = express()
 app.get('/', function (req, res) {
   res.send('Hello World!')
 })
+app.get('/webhook/', function (req, res) {
+  if (req.query['hub.verify_token'] === 'pornpoj') {
+    res.send(req.query['hub.challenge']);
+  }
+  res.send('Error, wrong validation token');
+})
 
 app.set('port', (process.env.PORT || 5000))
 
