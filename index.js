@@ -1,9 +1,12 @@
 var express = require('express')
 var app = express()
+var bodyParser = require('body-parser')
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
 })
+
+app.use(bodyParser.json())
 app.get('/webhook/', function (req, res) {
   if (req.query['hub.verify_token'] === 'pornpoj') {
     res.send(req.query['hub.challenge']);
