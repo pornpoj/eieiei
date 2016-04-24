@@ -1,8 +1,12 @@
-var express = require('express');
-var app = express();
+var express = require('express')
+var app = express()
 
-app.get('/', function(req, res){
-  res.send('hello world');
-});
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
 
-app.listen(3000);
+app.set('port', (process.env.PORT || 5000))
+
+app.listen(app.get('port'), function () {
+  console.log('Example aoo listening on port ' + app.get('port') + ' !')
+})
